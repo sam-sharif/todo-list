@@ -1,0 +1,23 @@
+.homePage
+{
+height: 100%;  
+background-size:cover;
+background-position:center ;
+width: 100vw+48px;
+
+
+}
+.jumbotron {
+   
+    background-size: cover;
+    height:1000px;
+    
+  }
+  .container{
+     position: sticky;
+     top:40%
+  }
+  #backgroundDiv{
+     background-color: rgba(17, 1, 1,0.5);
+    
+  }
