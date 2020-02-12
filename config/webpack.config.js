@@ -449,9 +449,10 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders({
                 importLoaders: 1,
                 sourceMap: isEnvProduction && shouldUseSourceMap,
-                modules: {
-                  getLocalIdent: getCSSModuleLocalIdent,
-                },
+                modules: true,
+                localIdentName : '[name]__[local]__[hash:base64:5]',
+                minimize: true,
+                sourceMap: shouldUseSourceMap
               }),
             },
             // Opt-in support for SASS (using .scss or .sass extensions).

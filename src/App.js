@@ -8,7 +8,7 @@ import HomePage from './Components/homePage/homePage'
 import {connect} from 'react-redux'
 import Signup from './Container/Signup/Signup'
 import todoAxios from './api/todo/todoAxios'
-//import TodoForm from './Container/TodoForm/TodoForm'
+import TodoForm from './Container/TodoForm/TodoForm'
 
 
 
@@ -23,10 +23,7 @@ class App extends Component {
         request.headers.common['Authorization']='Bearer ' + this.props.token;
         request.headers.common['Content-Type']='application/json'
         request.headers.common['Accept']='application/json'
-        console.log('INTERCEPTOR')
-        console.log(this.props.token)
-            console.log(request);
-            console.log('INTERCEPTOR')
+console.log(request)
             return request;
         },error=>console.log(error)
         )
@@ -35,16 +32,17 @@ class App extends Component {
      
     let myRouts = (
       <Switch>
-        <Route path='/' exact component={HomePage}/>
+        
         <Route path='/signup' exact component={Signup}/>
         <Route path='/login' exact component={Login}/>
-        <Route path='/todo' exact component={this.props.userAuthenticated?TodoList:Login}/>
-        
+        <Route path='/todoList' exact component={this.props.userAuthenticated?TodoList:Login}/>
+        <Route path='/todoForm' exact component={this.props.userAuthenticated?TodoForm:Login}/>
         <Route path='/home' exact component={HomePage}/>
+        <Route path='/'  component={HomePage}/>
       </Switch>
     )
     return (
-      <div className="App" style={{marginTop:'-50px'}}>
+      <div className="App" style={{backgroundColor:'rgb(243, 178, 227)'}}>
          <Navbar>
          {myRouts}
          </Navbar>

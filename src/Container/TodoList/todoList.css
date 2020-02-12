@@ -17,14 +17,46 @@
    line-height: 1.42em;
    color:#A7A1AE;
    background-color:#1F2739;
+  
+ }
+ #yesSign {font-size: 30px;color:yellow}
+ #noSign {font-size: 30px;color:red}
+ #main{padding:5px;}
+ #tableTitle{
+  
+  font-weight: 800;
+  line-height:1em;
+  text-align: center;
+  color: rgb(199, 11, 11);
+  font-family: fantasy;
  }
  
- h1 {
-   font-size:3em; 
-   font-weight: 300;
+ #addBtn{
+   width:20%;
+   
+   background-color: rgb(63, 21, 247);
+   border:1px black solid ;
+   border-radius: 15px;
+   padding: 0px;
+   margin: 5px;
+   text-align: center; 
+ }
+ #addBtn p{
+   font-weight: bolder;
+   font-size: 1.5em;
+   color: white;
+   margin: auto;
+  }
+ #addBtn:hover{box-shadow: 2px 2px 10px 10px #796b6b;}
+ #newtaskP{font-weight: 1000;}
+ #H1 {
+   font-size:1.5em; 
+   font-weight: 800;
    line-height:1em;
    text-align: center;
-   color: #4DC3FA;
+   color: rgb(10, 10, 10);
+   font-family: sans-serif;
+   margin: 5px;
  }
  
  h2 {
@@ -55,20 +87,20 @@
  }
  
  .container td {
-       font-weight: normal;
-       font-size: 1em;
-   -webkit-box-shadow: 0 2px 2px -2px rgb(252, 252, 253);
-        -moz-box-shadow: 0 2px 2px -2px rgb(251, 252, 253);
-             box-shadow: 0 2px 2px -2px rgb(252, 252, 253);
+       font-weight: bolder;
+       font-size: 1.2em;
+   color:white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-align: center;
  }
  
  .container {
        text-align: left;
-       overflow: hidden;
-       width: 80%;
-       margin: 0 auto;
+       overflow: scroll;
+       width: 100%;
+       margin: 0 ;
    display: table;
-   padding: 0 0 8em 0;
+   
  }
  
  .container td, .container th {
@@ -79,33 +111,42 @@
  
  /* Background-color of the odd rows */
  .container tr:nth-child(odd) {
-       background-color: #323C50;
+       background-color: rgb(42, 194, 240);
+       
  }
  
  /* Background-color of the even rows */
  .container tr:nth-child(even) {
-       background-color: #2C3446;
+       background-color: rgb(173, 8, 165);
+      
  }
  
  .container th {
-     border-bottom: 1px solid black;
-     color:black;
-       background-color: rgb(190, 10, 145);
+     
+     color:rgb(2, 0, 10);
+       background-color: rgb(225, 240, 24);
+       position: sticky;
+       top:8%;
+       z-index: 100;
+       text-align: center;
+       max-width: 100%;
+      padding: 5px;
+       
  }
- .container td{color: white;}
+ 
  
  .container td:first-child { color: rgb(252, 250, 251); }
  
  .container tr:hover {
-    background-color: #464A52;
+    background-color: rgb(11, 175, 93);
  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
         -moz-box-shadow: 0 6px 6px -6px #0E1119;
              box-shadow: 0 6px 6px -6px #0E1119;
  }
  
- .container td:hover {
-   background-color: #FFF842;
-   color: #403E10;
+ .container td:not(.notHover):hover {
+   background-color: rgb(48, 253, 7);
+   color: rgb(0, 7, 4);
    font-weight: bold;
    
    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
@@ -117,7 +158,20 @@
    transition-timing-function: line;
  }
  
- @media (max-width: 800px) {
- .container td:nth-child(4),
- .container th:nth-child(4) { display: none; }
+ @media (max-width: 420px) {
+  .container td{font-size:10px ;}
+  .container th{font-size:10px ;}
+  #deleteBtn{font-size:10px ;}
+  #updateBtn{font-size:10px ;}
+  td{padding: 5px;}
+  #titleDiv{display: none;}
+  .main{position: absolute;top:25%}
+  #addBtn{font-size: 10px;width: 120px;}
+ }
+ @media (max-width: 780px) {
+  th{padding: 10px;}
+  td{padding: 10px;}
+  #titleDiv{display: none;}
+  #main{position: absolute;top:25%}
+  #addBtn{font-size: 10px;width: 120px;}
  }

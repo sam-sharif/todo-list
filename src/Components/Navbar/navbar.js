@@ -9,7 +9,7 @@ const navbar = (props)=>{
 
   let todoList = null
   let logStatus = <NavLink to={props.location.pathname==='/signup'?'/login':'/signup'}>
-    <i className="fa fa-user-circle-o" style={{fontSize:'30px',color:'white'}}> Sign in/Sign up</i>
+    <i className="fa fa-user-circle-o" style={{fontSize:'30px'}}> Login/Sign-up</i>
     
     </NavLink>
   let auth = "login" 
@@ -18,9 +18,10 @@ const navbar = (props)=>{
     props.onLogout()
   }
   
+  
   if(props.userAuthenticated){
-    todoList = <NavLink to='/todo'><i class="fa fa-list-alt" style={{fontSize:'30px'}}> Todo List</i></NavLink>
-    logStatus = <a href="" onClick={logoutHandler}><span>Logout</span></a>
+    todoList = <NavLink to='/todoList'><i className="fa fa-list-alt" style={{fontSize:'30px'}}> Todo List</i></NavLink>
+    logStatus = <a href="" onClick={logoutHandler}><span><i className="fa fa-sign-out" style={{fontSize:'30px'}}>Logout</i></span></a>
     auth = "logout"
   }
   
@@ -39,7 +40,7 @@ const navbar = (props)=>{
 return(
 <Fragment>
     {myNavbar}
-    <main>
+    <main id="navbarMain">
      {props.children}
     </main>
     

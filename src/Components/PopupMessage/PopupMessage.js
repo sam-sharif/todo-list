@@ -1,20 +1,29 @@
 import React,{Component} from 'react'
-import './PopupMessage.css'
+import classes from './PopupMessage.css'
 
-const PopupMessage = (props)=>{
-   return(
-<body id="body">
+class PopupMessage extends Component{
+
+    state = {
+        
+        showPopup:false
+               
+    }
+    render(){
+
+        return(
+            <body id="body" className={this.state.showPopup?"active":null}>
 
 <div className="wrapper">
-    <div className="button" onClick={()=>document.getElementById('body').classList.add('active')}>
-        <span className="button-text">Press</span>
+    <div className="button" onClick={()=>this.setState({showPopup:true})}>
+
+        <span id="titleElement" className="button-text">{this.props.title}</span>
         <div className="button-backgrounds">
-            <div className="button-circle button-circle1"></div>
+        <div className="button-circle button-circle1"></div>
             <div className="button-circle button-circle2"></div>
             <div className="button-circle button-circle3"></div>
             <div className="button-circle button-circle4"></div>
         </div>
-    </div>
+    </div> 
 </div>
 
 <div className="wrapper">
@@ -31,16 +40,18 @@ const PopupMessage = (props)=>{
         </div>
         <div className="content">
             <div className="content-wrapper">
-                <h1>well done</h1>
-                <p>Do you like it?</p>
-                <p className="try-again" 
-                onClick={()=>document.getElementById('body').classList.remove('active')}>Yes! I will try again</p>
+                <h1 style={{fontSize:'25px'}}>Description</h1>
+                <p>{this.props.description}</p>
+                <p style={{fontWeight:'bold'}} className="try-again" 
+                onClick={()=>this.setState({showPopup:false})}>close</p>
             </div>
         </div>
     </div>
 </div>
 
 </body>
-)
+        )
+    }
+
 }
 export default PopupMessage

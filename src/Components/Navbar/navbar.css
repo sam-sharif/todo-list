@@ -1,15 +1,18 @@
 
-body {margin: 0;}
+body {margin: 0;width: 100%;}
 span{font-size: 20px;}
 ul.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(66, 63, 63, 0.815);
+  background-color: rgba(66, 63, 63);
   z-index: 1000;
   position: sticky;
   top:0
+}
+#navbarMain{
+  margin: 0;
 }
 
 ul.topnav li {float: left;}
@@ -21,7 +24,7 @@ ul.topnav li a {
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  
 }
 
 ul.topnav li a:hover:not(.active) {background-color: #111;}
@@ -30,7 +33,15 @@ ul.topnav li a.active {background-color: #4CAF50;}
 
 ul.topnav li.right {float: right;}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 420px) {
   ul.topnav li.right, 
-  ul.topnav li,ul.topnav li.login {float: none;width: 100%;}
+  ul.topnav li,ul.topnav li.login , ul.topnav .logout {float: none;width: 100%;border: 1px solid white;}
+  ul.topnav {position: fixed;width: 100%;top:0}
+  
+}
+@media screen and (max-width: 780px) {
+  ul.topnav li.right, 
+  ul.topnav li,ul.topnav li.login , ul.topnav .logout {float: none;width: 100%;border: 1px solid white;}
+  ul.topnav {position: fixed;width: 100%;top:0}
+  
 }

@@ -16,13 +16,13 @@
     background: #191919;
     background: white;
     user-select: none;
-    letter-spacing: 3px;
+    letter-spacing: 0px;
     color: #b9b9b9; 
 }
 
 .content-wrapper h1{
     padding-bottom: 40px;
-    text-transform: uppercase;
+    top: 10px;
     letter-spacing: 3px;
     font-size: 16px;
 }
@@ -59,12 +59,12 @@ p:last-of-type{
 }
 
 .wrapper{
-    position: absolute;
+    position: inherit;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: inherit;
     align-items: center;
     justify-content: center;
 }
@@ -74,17 +74,17 @@ p:last-of-type{
     position: relative;
     z-index: 2;
     -webkit-appearance: none;
-    background: none;
+    background: rgb(226, 245, 141);
     outline: none;
     border: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    text-transform: ercauppse;
+    letter-spacing: 0px;
     border-radius: 2px;
     transition: all 0.5s ease;
     font-weight: 600;
     font-size: 14px;
-    height: 60px;
-    width: 110px;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,9 +95,11 @@ p:last-of-type{
 
 .button-text{
     display: inline-block;
+    padding: 1px;
+    text-align: center;
     position: relative;
     z-index: 2;
-    background: linear-gradient(to right, #504bff, #4cfa63);
+    background: linear-gradient(to right, #080808, #070707);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -159,11 +161,13 @@ p:last-of-type{
 .popup{
     opacity: 0;
     visibility: hidden;
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
     flex-shrink: 0;
     border-radius: 3px;
-    position: relative;
+    position: fixed;
+    left:30%;
+    top: 30%;
     z-index: 3;
     display: flex;
     align-items: center;
@@ -294,6 +298,10 @@ p:last-of-type{
 #body.active .popup{
     opacity: 1;
     visibility: visible;
+    height: 400px;
+    width: 400px;
+    top:40% ;
+    left:30%;
 }
 
 #body.active .popup-inside{
@@ -308,3 +316,13 @@ p:last-of-type{
 #body.active .background6{
     transform: scale(8);
 }
+@media (max-width: 500px) {
+    .button-text{font-size:10px ;}
+    #body.active .popup{
+        overflow: scroll;
+        top:40% ;
+        left:10%;
+        height: 220px;
+        width: 250px;
+    }
+   }

@@ -4,16 +4,37 @@ height: 100%;
 background-size:cover;
 background-position:center ;
 width: 100vw+48px;
-
-
 }
+#homepageH1{
+   color: rgb(80, 149, 228);
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   font-weight: bolder;
+   text-shadow: 3px 3px black;
+   background-color: rgba(139, 137, 139,0.3);
+   border: 1px solid black;
+}
+
+#homepageBackgroundDiv p{
+color: white;
+font-weight: bolder;
+font-size: 20px;
+width: 70%;
+margin-left: auto;
+margin-right: auto;
+background-color: rgba(139, 137, 139,0.7);
+   border: 1px solid black;
+   
+}
+
 .jumbotron {
    
     background-size: cover;
     height:1000px;
     
   }
-  .container{
+  #HomepageContainer{
      position: sticky;
      top:40%
   }
@@ -21,3 +42,7 @@ width: 100vw+48px;
      background-color: rgba(17, 1, 1,0.5);
     
   }
+  @media(max-width:420px) {
+   #homepageH1{font-size: 50px}
+   
+}
