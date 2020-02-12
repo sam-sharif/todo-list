@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/my-todo-list/static/css/main.dc3f8d8d.chunk.css",
+    "main.js": "/my-todo-list/static/js/main.c4d0b61b.chunk.js",
+    "main.js.map": "/my-todo-list/static/js/main.c4d0b61b.chunk.js.map",
+    "runtime-main.js": "/my-todo-list/static/js/runtime-main.ea5c73df.js",
+    "runtime-main.js.map": "/my-todo-list/static/js/runtime-main.ea5c73df.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/my-todo-list/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.3b288614.chunk.js": "/my-todo-list/static/js/2.3b288614.chunk.js",
+    "static/js/2.3b288614.chunk.js.map": "/my-todo-list/static/js/2.3b288614.chunk.js.map",
+    "index.html": "/my-todo-list/index.html",
+    "precache-manifest.82a7dfb9405b3a122a5bd907d275ea2f.js": "/my-todo-list/precache-manifest.82a7dfb9405b3a122a5bd907d275ea2f.js",
+    "service-worker.js": "/my-todo-list/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/my-todo-list/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.dc3f8d8d.chunk.css.map": "/my-todo-list/static/css/main.dc3f8d8d.chunk.css.map",
+    "static/js/2.3b288614.chunk.js.LICENSE": "/my-todo-list/static/js/2.3b288614.chunk.js.LICENSE",
+    "static/media/material-design-iconic-font.min.css": "/my-todo-list/static/media/Material-Design-Iconic-Font.d2a55d33.woff",
+    "static/media/main.css": "/my-todo-list/static/media/Poppins-SemiBold.e63b93df.ttf",
+    "static/media/bg-01.jpg": "/my-todo-list/static/media/bg-01.c92b2d76.jpg",
+    "static/media/dreamstime.jpg": "/my-todo-list/static/media/dreamstime.f5c2ae1a.jpg",
+    "static/media/favicon.ico": "/my-todo-list/static/media/favicon.7d4140c7.ico",
+    "static/media/font-awesome.min.css": "/my-todo-list/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea5c73df.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.3b288614.chunk.js",
+    "static/css/main.dc3f8d8d.chunk.css",
+    "static/js/main.c4d0b61b.chunk.js"
+  ]
+}
